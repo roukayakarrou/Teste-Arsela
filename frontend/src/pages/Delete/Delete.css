@@ -1,0 +1,19 @@
+.delete-body{
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 45px;
+    /* animation: slideInLeft 0.2s; */
+}
+
+.forms-list{
+    height: 650px;
+    width: 850px;
+    border-radius: 15px;
+    background-color: #ffff;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

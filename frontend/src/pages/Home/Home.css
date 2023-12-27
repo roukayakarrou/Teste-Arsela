@@ -1,0 +1,12 @@
+.home-body{
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 45px;
+    /* animation: slideInLeft 0.2s; */
+}
+
+#create-form{
+    background-color: rgba(173, 216, 230, 0.5);
+}
