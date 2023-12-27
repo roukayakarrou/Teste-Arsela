@@ -55,6 +55,7 @@ function Form() {
   const [showShareModal, setShowShareModal] = useState(false);
   const [formId, setFieldId] = useState("");
   const setSecretKey = useBearStore((state) => state.setSecretKey);
+  const secretKey = useBearStore((state) => state.secretKey);
 
   const [, drop] = useDrop({
     accept: "toolboxItem",
@@ -134,7 +135,7 @@ function Form() {
           <FaRegSave /> Save My Form
         </button>
       </div>
-      <ShareModal show={showShareModal} handleClose={handleCloseShareModal} url={`http://localhost:5173/submit-form/${formId}`} />
+      <ShareModal show={showShareModal} handleClose={handleCloseShareModal} secretKey={`${secretKey}`} url={`http://localhost:5173/submit-form/${formId}`} />
     </div>
   );
 }

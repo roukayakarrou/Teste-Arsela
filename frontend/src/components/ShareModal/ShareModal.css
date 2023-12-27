@@ -25,13 +25,6 @@
   border-radius: 8px;
 }
 
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: -25px;
-}
-
 .modal-body {
   text-align: center;
   display: flex;
@@ -40,6 +33,12 @@
   align-items: center;
   text-align: center;
 }
+
+.modal-body p.info {
+  font-family: var(--main-font);
+  font-size: 14px;
+}
+
 .modal-body p {
   font-family: var(--main-font);
 }
@@ -87,4 +86,6 @@
   font-size: 20px;
   cursor: pointer;
   color: #333;
+  position: absolute;
+  right: 20px;
 }

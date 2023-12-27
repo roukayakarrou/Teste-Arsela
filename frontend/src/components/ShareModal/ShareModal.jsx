@@ -4,7 +4,7 @@ import ClipboardCopy from "clipboard-copy";
 import { FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon } from "react-share";
 import Modal from "react-modal";
 
-const ShareModal = ({ show, handleClose, url }) => {
+const ShareModal = ({ show, handleClose, url, secretKey }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -34,14 +34,15 @@ const ShareModal = ({ show, handleClose, url }) => {
         },
       }}
     >
-      <div className="modal-header">
-        <h3>Your Form Was Successfully Generated</h3>
-        <button className="close-button" onClick={handleClose}>
-          &times;
-        </button>
-      </div>
+      <button className="close-button" onClick={handleClose}>
+        &times;
+      </button>
       <div className="modal-body">
+      <h3>Your Form Was Successfully Generated</h3>
         <p>{url}</p>
+        <p>Secret key: {secretKey}</p>
+        <p className="info">Keep this secret key safe, it's the only way you can manage you form</p>
+        
         <button className="copy-button" onClick={handleCopy}>
           {copied ? "Copied!" : "Copy to Clipboard"}
         </button>
